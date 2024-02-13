@@ -382,7 +382,7 @@ footer .footer-texto{
 /* Responsive */
 @media (max-width:800px) {
   .circle{
-    visibility: hidden;
+    display: none;
   }
 }
 @media (min-width:1220px) {
