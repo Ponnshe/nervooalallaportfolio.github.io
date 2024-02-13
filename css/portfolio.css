@@ -51,6 +51,8 @@ h3{
 /* Navbar */
 .navbar{
   position: sticky;
+  top: 0;
+  z-index: 10;
   padding: 1.5rem;
   background: radial-gradient(ellipse at top, #13008085, transparent),
           radial-gradient(ellipse at bottom, #050120, transparent);
@@ -84,8 +86,11 @@ h3{
   .navbar .container-fluid .collapse ul li a.about::before{
     width: 82px;
   }
-  .navbar .container-fluid .collapse ul li a.contact::before,
-  .navbar .container-fluid .collapse ul li a.projects::before{
+  .navbar .container-fluid .collapse ul li a.aexperience::before{
+    width: 93px;
+  }
+  .navbar .container-fluid .collapse ul li a.acontact::before,
+  .navbar .container-fluid .collapse ul li a.aprojects::before{
     width: 69px;
   }
 
@@ -351,6 +356,26 @@ footer .footer-texto{
   color: white;  
   font-size: 1.3rem;
   transition: all 0.2s ease-in;
+}
+
+.copyright{
+  font-size: 15px;
+  color: #aeaeae;
+  padding: 20px;
+}
+
+/* Home Arrow */
+.home{
+  position: sticky;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 50%;
 }
 
 
