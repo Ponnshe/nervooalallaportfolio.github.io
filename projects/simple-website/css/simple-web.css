@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+::selection{
+    color: #000;
+    background: #fff;
+}
+
+.main{
+    background: url("../img/hollow-knight-art_bGZlZ26UmZqaraWkpJRqZmdlrWdtbWU-4012365983.jpg") bottom no-repeat;
+    background-size:cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    padding: 5px 0;
+    display: flex;
+    background-color: rgba(5, 19, 9,0.3);
+    backdrop-filter: blur(10px);
+    /*background-color: rgb(20, 20, 20); */
+    color: white;
+    box-shadow:0px 2px 1px rgba(160, 253, 171, 0.1);
+    position: absolute;
+    z-index: 100;
+    overflow: auto;
+}
+
+.title{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 4%;
+    z-index: 100;
+}
+
+.title a{
+    text-decoration: none;
+    color: white;
+}
+.title a:hover{
+    background: -webkit-linear-gradient(rgb(111, 237, 143), rgb(0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
+
+.nav .options{
+    display: flex;
+    align-items: center;
+    margin-left: 50%;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+
+.nav .options .option{
+    font-size: 13px;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav .options .option a::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: -webkit-linear-gradient(rgb(111, 237, 143), rgb(255, 255, 255));
+    top: 42px;
+    visibility: hidden;
+}
+.nav .options .option a.a::before,a.b::before{
+    width: 43px;
+}
+.nav .options .option a.c::before{
+    width: 58px;
+}
+.nav .options .option a.d::before{
+    width: 57px;
+}
+.nav .options .option a.e::before{
+    width: 68px;
+}
+
+.nav .options .option:hover a{
+    background: -webkit-linear-gradient(rgb(111, 237, 143), rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    font-size: 14px;
+}
+.nav .options .option:hover a::before{
+    visibility: visible;
+}
+
+.nav .options .option a{
+    color: white;
+    text-decoration: none;
+}
+
+.body{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    overflow: hidden;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    box-shadow:3px 3px 5px rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .titles{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .titles h1{
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.container .titles h2{
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.container .btns{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+
+.container .btns button{
+    height: 40px;
+    width: 100px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.container .btns .learn{
+    background-color: transparent;
+    border: solid 2px white;
+    color: white;
+}
+.container .btns .learn:hover{
+    border: none;
+    color: black;
+    background-color: rgba(13, 255, 208, 0.4);
+    backdrop-filter: blur(5px);
+}
+.container .btns .sub:hover{
+    border: none;
+    color: #ffffff;
+    background-color: rgba(6, 53, 26, 0.8);
+    backdrop-filter: blur(5px);
+}

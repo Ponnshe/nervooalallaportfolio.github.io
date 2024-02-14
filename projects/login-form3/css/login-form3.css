@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #af0056;
+}
+
+.container{
+    height: 80%;
+    width: 25%;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: white;
+    overflow: auto;
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.container .title .underline{
+    position: relative;
+    top: -7px;
+    height: 2px;
+    width: 27px;
+    background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+}
+
+.container form .input-box input{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom:2px solid #ccc;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.container form .input-box .underline{
+    position: relative;
+    top: -12px;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+    transition: all 0.3s linear;
+}
+.container form .input-box input:focus ~ .underline{
+    width: 100%;
+}
+
+.container form .button{
+    width: 100%;
+    margin: 20px 0 10px 0;
+}
+.container form .button input{
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+.container form .button input:hover{
+    background: linear-gradient(to left, rgb(153, 0, 77) 0%, #ff0080 100%);
+    letter-spacing: 1px;
+}
+
+.container .sep::before,
+.container .sep::after{
+    content: "";
+    border-bottom: solid 1px black;
+    width: 10%;
+}
+.container .sep{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px;
+}
+.container .sep p{
+    margin: 0 5px;
+}
+
+.container .buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .buttons .btn{
+    width: 100%;
+}
+
+.container .buttons .btn button{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    border: none;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+}
+.container .buttons .btn button i{
+    margin: 5px 10px 5px 5px;
+    font-size: 16px;
+}
+.container .buttons .btn button p{
+    font-size: 14px;
+}
+.container .buttons .btn.twitter button{
+    background-color: #15afe8;
+}
+.container .buttons .btn.facebook button{
+    background-color: #3b5894;
+}
+.container .buttons .btn button:hover{
+    letter-spacing: 1px;
+    opacity: 0.9;
+    box-shadow: 0 0 20px #303f5c;
+}

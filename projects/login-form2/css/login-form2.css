@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f2f3;
+}
+
+.container{
+    width: 22%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    background-color: white;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 76px;
+    background: linear-gradient(45deg,rgb(81, 87, 191),rgb(199, 81, 182));
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    border-radius: 10px 10px 0 0;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#email, #password{
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    outline: none;
+    padding: 10px 15px;
+    margin: 0px 0;
+}
+
+#email-hint, #password-hint{
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    position: relative;
+    left: 16px;
+    top: -32px;
+    transition: all 0.1s linear;
+    cursor: text;
+}
+
+#email:focus, #password:focus{
+    border: solid 1px black;
+}
+
+#email:focus ~ #email-hint, #password:focus ~ #password-hint{
+    transform: translateY(-22px);
+    background-color:white;
+    width: 101px;
+}
+#password:focus ~ #password-hint{
+    width: 70px;
+}
+
+.remember, .end{
+    width: 100%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.remember a{
+    margin-left: auto;
+}
+
+.btn{
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+}
+.btn button{
+    width: 100%;
+    border: none;
+    background: linear-gradient(45deg,rgb(81, 87, 191),rgb(199, 81, 182));
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    transition: all 0.2s linear;
+}
+.btn button:hover{
+    box-shadow: 0px 0px 20px rgb(199, 81, 182);
+    border:solid 1px rgb(63, 4, 102);
+}

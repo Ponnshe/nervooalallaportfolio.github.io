@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dad3f8;
+}
+
+.container{
+    max-width: 950px;
+    width: 100%;
+    background-color: white;
+    padding: 40px 50px 40px 40px;
+    margin: 0 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-title{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+.list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-right: 50px;
+}
+
+input{
+    display: none;
+}
+
+.list label{
+    height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 60px;
+    padding-left: 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #333;
+    z-index: 12;
+    transition: all 0.3s linear;
+}
+
+.list .indicator{
+    position:absolute;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #6d50e2;
+    left: 0;
+    transition: all 0.2s linear;
+}
+
+#home:checked ~ .list .indicator{
+    top: 0;
+}
+#blog:checked ~ .list .indicator{
+    top: 60px;
+}
+#help:checked ~ .list .indicator{
+    top: 120px;
+}
+#code:checked ~ .list .indicator{
+    top: 180px;
+}
+#about:checked ~ .list .indicator{
+    top: 240px;
+}
+
+#home:checked ~ .list .home,
+#blog:checked ~ .list .blog,
+#help:checked ~ .list .help,
+#code:checked ~ .list .code,
+#about:checked ~ .list .about{
+    color: white;
+}
+
+.list label:hover{
+    color: #6d50e2;
+}  
+
+.container .content .text-content{
+    width: 80%;
+    height: 100%;
+}
+
+.container .content .text-content .text{
+    display: none;
+}
+
+/* .container .content .text-content .home{
+    display: block;
+} */
+
+.container .content .text-content .title{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.container .content .text-content p{
+    text-align: justify;
+}
+
+#home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about{
+    display: block;
+}
+
+@media  screen and (max-width:785px) {
+    .list{
+        width: 15%;
+    }
+    .list label span{
+        display: none;
+    }
+}
+@media  screen and (max-width:435px) {
+    .list{
+        width: 15%;
+    }
+    .list label span{
+        display: none;
+    }
+    .list .indicator{
+        left: 50%;
+    }
+}
